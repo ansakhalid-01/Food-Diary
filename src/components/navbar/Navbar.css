@@ -83,7 +83,7 @@
 }
 
 /* For Small Screens */
-@media (max-width: 768px) {
+@media (max-width: 860px) {
   .navbar{
     height: 100%;
   }
