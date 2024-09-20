@@ -2,7 +2,7 @@
   width: 600px;
   max-height: 100%;
   height: auto;
-  margin: 30px auto;
+  margin: 200px auto 0 auto;
 }
 
 .sticky-top {
@@ -21,6 +21,19 @@
   min-height: 50px;
   cursor: pointer;
 }
+
+.not-found-message {
+  text-align: center;
+  font-size: 24px;
+  color: #84BD00;
+  font-family: 'Montserrat', sans-serif;
+  padding: 20px;
+  font-weight: 600;
+  border: 2px dashed #84BD00;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
 
 .nav-items {
   list-style: none;
@@ -98,13 +111,16 @@
 .recipe-item {
   width: 306.93px;
   height: auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth animation */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial box shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border 0.3s ease; /* Added background-color and border to transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px; /* Optional: to add rounded corners */
+  background-color: white; /* Default background color */
 }
 
 .recipe-item:hover {
-  transform: translateY(-5px); /* Lift effect on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced box shadow on hover */
+  transform: translateY(-5px) scale(1.02); /* Added scaling effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  background-color: #f9f9f9; /* Change background color on hover */
 }
 
 

@@ -44,11 +44,11 @@ const RecipeDetails = () => {
         <div className="recipe-content">
           <h1>{recipe.name}</h1>
           <div className="instructions">
-            <p>Instructions</p>
+            <h2>Instructions</h2>
             <p>{recipe.instructions}</p>
           </div>
           <div className="ingredients">
-            <p className="ingredients-title">Ingredients</p>
+            <h2 className="ingredients-title">Ingredients</h2>
             <ul>
               {recipe.ingredients.map((ingredient, index) => (
                 <li key={index} className="ingredient-item">

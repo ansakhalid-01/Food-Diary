@@ -80,4 +80,13 @@
   }
 }
 
+@media (max-width: 576px) {
+  .search-bar-wrapper{
+    width: 100%;
+  }
+  .search-bar-container {
+    width: 100%; 
+  }
+}
+
 

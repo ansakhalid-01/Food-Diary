@@ -54,6 +54,7 @@ const RecipeItems = () => {
   const [recipes, setRecipes] = useState([]);
   const [filteredRecipes, setFilteredRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [hasSearched, setHasSearched] = useState(false); // New state to track search
 
   useEffect(() => {
     setTimeout(() => {
@@ -61,7 +62,7 @@ const RecipeItems = () => {
         .then((response) => response.json())
         .then((data) => {
           setRecipes(data.recipes);
-          setFilteredRecipes(data.recipes); // Initialize with all recipes
+          setFilteredRecipes(data.recipes);
           setLoading(false);
         })
         .catch((error) => {
@@ -86,6 +87,7 @@ const RecipeItems = () => {
       return matchesQuery && matchesCuisine;
     });
     setFilteredRecipes(results);
+    setHasSearched(true); // Set to true when a search is performed
   };
 
   return (
@@ -103,15 +105,21 @@ const RecipeItems = () => {
         {loading ? (
           <div className="loader"></div>
         ) : (
-          <div className="recipe-grid">
-            {filteredRecipes.map((recipe) => (
-              <RecipeItem
-                key={recipe.id}
-                recipe={recipe}
-                onClick={openRecipeInNewTab}
-              />
-            ))}
-          </div>
+          <>
+            {filteredRecipes.length === 0 && hasSearched ? ( // Check if there are no recipes and a search has been performed
+              <div className="not-found-message">Recipe not found!</div>
+            ) : (
+              <div className="recipe-grid">
+                {filteredRecipes.map((recipe) => (
+                  <RecipeItem
+                    key={recipe.id}
+                    recipe={recipe}
+                    onClick={openRecipeInNewTab}
+                  />
+                ))}
+              </div>
+            )}
+          </>
         )}
       </div>
     </>
