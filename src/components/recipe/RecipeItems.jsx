@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback, memo } from "react";
 import "./RecipeItems.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock } from "@fortawesome/free-solid-svg-icons";
+import { faClock as farClock } from "@fortawesome/free-regular-svg-icons";
 import RecipeNav from "../navbar/RecipeNav";
 import SearchBar from "../search/SearchBar";
 import Logo from "../header/Logo";
@@ -35,7 +35,7 @@ const RecipeItem = memo(({ recipe, onClick }) => {
         <div className="recipe-info">
           <div className="recipe-time-mealtype">
             <div className="recipe-time">
-              <FontAwesomeIcon icon={faClock} />{" "}
+              <FontAwesomeIcon icon={farClock} />{" "}
               {recipe.prepTimeMinutes + recipe.cookTimeMinutes} minutes
             </div>
             <div className="recipe-type">{recipe.mealType[0]}</div>
