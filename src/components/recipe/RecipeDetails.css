@@ -8,6 +8,14 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.styled-image-wrapper-recipe {
+  top: 120px; 
+}
+
+.container-nav{
+  margin: 80px auto;
+}
+
 .recipe-content {
   background-color: rgba(139, 136, 136, 0.1);
   border-radius: 15px;
