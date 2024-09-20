@@ -92,6 +92,9 @@ li {
 }
 
 @media (max-width: 768px) {
+  .container-nav{
+    margin-top: 180px;
+  }
   .recipe-details {
     flex-direction: column;
   }

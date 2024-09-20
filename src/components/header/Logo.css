@@ -9,6 +9,7 @@
     left: 112px; /* Distance from the left edge */
     margin-top: 20px; /* Add top margin */
     z-index: 1; /* Ensure logo is above other elements */
+    cursor: pointer;
   }
   
   /* Media Queries for Responsiveness */
