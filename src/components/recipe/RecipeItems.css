@@ -97,8 +97,16 @@
 
 .recipe-item {
   width: 306.93px;
-  height: auto; 
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth animation */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial box shadow */
 }
+
+.recipe-item:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced box shadow on hover */
+}
+
 
 
 .image-container {
